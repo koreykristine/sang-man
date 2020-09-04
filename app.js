@@ -144,8 +144,7 @@ const checkLetter = function (str,letter) {
         $('#guesses').text("You Lose!");
         $('.photo-box img').css('filter', 'blur(0px)');
     }
-    if(blankArray.indexOf("_") === -1){
-        console.log("kill me");
+    if(blankArray.indexOf("_") === -1){ // checking to see if there are any blank spaces left
         $('#guesses').text("You Win!");
         $('.photo-box img').css('filter', 'blur(0px)');
     }
