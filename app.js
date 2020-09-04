@@ -144,9 +144,10 @@ const checkLetter = function (str,letter) {
         $('#guesses').text("You Lose!");
         $('.photo-box img').css('filter', 'blur(0px)');
     }
-    for(let i = 0; i < letter.length; i++){
-        if ($popAnswer.text(blankArray.join(' ')) === blankArray.length)
-        console.log("winner");
+    if(blankArray.indexOf("_") === -1){
+        console.log("kill me");
+        $('#guesses').text("You Win!");
+        $('.photo-box img').css('filter', 'blur(0px)');
     }
 }
 
