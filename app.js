@@ -90,18 +90,14 @@ $popAnswer.text(answer.title);
 answerString = answer.title.split("");
 console.log(answerString);
 
-let space = 0;
-
 /* blank spaces based on number of letters in the title */
 for(let i = 0; i < answerString.length; i++) {
     if(answerString[i] === " "){
         blankArray[i] = '\xa0'; // creates white spaces in between words
-        space = 1;
     } else {
     blankArray[i] = "_";
     }
 }
-
 
 /* udates answer letters to blank spaces */
 $popAnswer.text(blankArray.join(' '));
